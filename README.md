@@ -1,3 +1,3 @@
 # Pr-cticaER
+![Imagen de WhatsApp 2024-08-21 a las 21 43 56_614fc41c](https://github.com/user-attachments/assets/82b3e8b6-d88b-451c-8c2a-c14b1841b05f)
 
-![Untitled](https://github.com/user-attachments/assets/6e6489ed-87ca-4ee4-bd49-bd30e13d726c)
