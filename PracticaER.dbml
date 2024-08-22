@@ -1,0 +1,84 @@
+Table Person {
+  id integer [primary key]
+  name varchar
+  lastName varchar
+  birthdate date
+  idDocument varchar
+  email varchar 
+}
+
+Table Student {
+  id integer [primary key]
+  username varchar
+  password varchar
+}
+
+Table Writer {
+  id integer [primary key]
+}
+
+Table Loan {
+  id integer [primary key]
+  startDate date
+  endDate date
+  retunDate date
+}
+
+Table Inventory {
+  id integer [primary key]
+  quantity varchar
+}
+
+Table Book {
+  ISBN integer [primary key]
+  title varchar
+  publishDate date
+}
+
+Table PersonGender {
+  id integer [primary key]
+  gender varchar
+}
+
+
+Table BookGender {
+  id integer [primary key]
+  gender varchar
+}
+
+
+Table Country {
+  id integer [primary key]
+  name varchar
+}
+
+Table State {
+  id integer [primary key]
+  name varchar
+}
+
+Table DetailBook {
+  id integer [primary key]
+}
+
+Table CountryPerson {
+  id integer [primary key]
+}
+
+Table LoanDescription {
+  id integer [primary key]
+}
+
+Ref: Person.id - Student.id // one-to-one
+Ref: Person.id - Writer.id // one-to-one
+Ref: PersonGender.id < Person.id // one-to-many
+Ref: Person.id < CountryPerson.id // one-to-many
+Ref: Country.id < CountryPerson.id // one-to-many
+Ref: Country.id < State.id // one-to-many
+Ref: Writer.id < DetailBook.id //one-to-many
+Ref: Book.ISBN < DetailBook.id //one-to-many
+Ref: Book.ISBN > BookGender.id //many-to-one
+Ref: Student.id < Loan.id //one-to-many
+Ref: Loan.id < LoanDescription.id //one-to-many
+Ref: Book.ISBN < LoanDescription.id //one-to-many
+Ref: Inventory.id > Book.ISBN //many-to-one
